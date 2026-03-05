@@ -55,7 +55,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow opacity-0"
+        className="absolute bottom-10 inset-x-0 flex justify-center animate-bounce-slow opacity-0"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs font-medium uppercase tracking-widest text-[var(--muted)]">
