@@ -35,7 +35,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center px-6">
+    <section className="relative flex min-h-screen flex-col items-center justify-center px-6">
       <div className="mx-auto max-w-4xl text-center">
         <h1
           ref={headlineRef}
@@ -55,7 +55,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
-        className="absolute bottom-10 inset-x-0 flex justify-center animate-bounce-slow opacity-0"
+        className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce-slow opacity-0"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs font-medium uppercase tracking-widest text-[var(--muted)]">
