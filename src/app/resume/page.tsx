@@ -67,10 +67,11 @@ export default function ResumePage() {
         </div>
 
         <p className="mb-6 max-w-2xl text-sm leading-relaxed text-[var(--muted)]">
-          Updated publication resume focused on publication design, AI-native
-          creative technology, QA automation, and CAD/3D skills. The PDF above
-          includes clickable links for LinkedIn, GitHub, portfolio, and selected
-          project references.
+          Updated publication resume focused only on publication design,
+          strategic reports, civic/publication systems, data visualization,
+          interactive review work, and AI-assisted workflows. The PDF above
+          includes clickable links for LinkedIn, GitHub, portfolio, and the
+          interactive review app reference.
         </p>
 
         {/* Resume preview image for reliable website display and screenshot thumbnails. */}
@@ -87,6 +88,7 @@ export default function ResumePage() {
             width={1224}
             height={1584}
             priority
+            unoptimized
             className="mx-auto h-auto w-full max-w-3xl rounded-2xl bg-white"
           />
         </a>

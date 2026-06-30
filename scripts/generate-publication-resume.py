@@ -14,8 +14,6 @@ LINKEDIN = "https://linkedin.com/in/iammaxwellwillis"
 GITHUB = "https://github.com/AlxanderArt"
 PORTFOLIO = "https://publication-portfolio.vercel.app"
 PLANO_REVIEW = "https://plano-design-review.vercel.app"
-HORIZONOPS = "https://horizonops-predictive-intelligence.vercel.app"
-PYMATION = "https://github.com/AlxanderArt/Pymation"
 
 styles = getSampleStyleSheet()
 styles.add(ParagraphStyle(
@@ -99,9 +97,10 @@ def P(text: str, style="Body"):
 def bullet(text: str):
     return Paragraph("• " + text, styles["ResumeBullet"])
 
+
 story = []
 story.append(P("MAXWELL WILLIS", "Name"))
-story.append(P("Publication Designer | AI-Native Creative Technologist | QA Automation Engineer | CAD / 3D Specialist", "Role"))
+story.append(P("Publication Designer | Strategic Reports | Civic Publication Systems | AI-Assisted Workflows", "Role"))
 story.append(P(
     f"Frisco / Plano / Dallas-Fort Worth, TX · (214) 986-4044 · iamaxwellwillis@gmail.com<br/>"
     f"<a href='{LINKEDIN}' color='blue'>LinkedIn</a> · "
@@ -112,17 +111,19 @@ story.append(P(
 
 story.append(P("SUMMARY", "Section"))
 story.append(P(
-    "Multidisciplinary publication designer and AI-native technologist with experience transforming complex civic, business, and technical information into polished, accessible, stakeholder-ready publications and interactive review systems. Combines publication graphics, editorial layout, data visualization, React/Next.js, QA automation, AI-assisted workflows, Rhino/XNURBS CAD surface modeling, and 3D printing to support high-quality communication, decision-making, and production execution."
+    "Publication-focused designer and AI-assisted workflow builder specializing in strategic reports, civic publication systems, data visualization, and interactive review work. Creates clear, stakeholder-ready publications and web-based review experiences that make complex public information easier to understand, evaluate, and approve."
 ))
 
-story.append(P("CORE STRENGTHS", "Section"))
-skills = [
-    [P("<b>Publication & Editorial</b><br/>Publication graphics, report/editorial layout, budget books, stakeholder review systems, presentation design, accessibility-aware information design", "Small"),
-     P("<b>Data & Visual Systems</b><br/>Data visualization, chart systems, infographic design, icon libraries, visual hierarchy, design systems, cross-functional review workflows", "Small")],
-    [P("<b>AI / Software / QA</b><br/>AI-assisted development, React, Next.js, TypeScript, Python, QA automation, API testing, Playwright, pytest, bug documentation", "Small"),
-     P("<b>CAD / 3D / Fabrication</b><br/>Rhino 3D, XNURBS CAD surface modeling, 3D modeling, 3D printing, geometric problem-solving, design-to-production workflows", "Small")],
+story.append(P("FOCUS AREAS", "Section"))
+focus = [
+    [P("<b>Publication Design</b><br/>Editorial layout, report systems, page hierarchy, cover concepts, visual consistency, and stakeholder-ready presentation assets", "Small"),
+     P("<b>Strategic Reports</b><br/>Long-form reports, executive-readable narratives, budget and research communication, structured findings, and visual storytelling", "Small")],
+    [P("<b>Civic / Publication Systems</b><br/>Public-sector publication modernization, reusable design systems, accessibility-aware communication, and review-ready document workflows", "Small"),
+     P("<b>Data Visualization & Interactive Review</b><br/>Charts, infographics, visual summaries, web-based review flows, selection persistence, and exportable decision records", "Small")],
+    [P("<b>AI-Assisted Workflows</b><br/>AI-supported drafting, organization, quality checks, repeatable production tasks, content refinement, and faster review cycles", "Small"),
+     P("<b>Portfolio Delivery</b><br/>Responsive publication portfolio pages, downloadable report assets, clickable references, and clear project documentation", "Small")],
 ]
-table = Table(skills, colWidths=[3.55*inch, 3.55*inch], hAlign="LEFT")
+table = Table(focus, colWidths=[3.55*inch, 3.55*inch], hAlign="LEFT")
 table.setStyle(TableStyle([
     ("VALIGN", (0, 0), (-1, -1), "TOP"),
     ("LEFTPADDING", (0, 0), (-1, -1), 0),
@@ -133,45 +134,30 @@ story.append(table)
 
 story.append(P("SELECTED PUBLICATION / DESIGN WORK", "Section"))
 story.append(P(f"City of Plano Budget & Research Publication Modernization — <a href='{PLANO_REVIEW}' color='blue'>Interactive Review App</a>", "ItemHead"))
-story.append(bullet("Contracted through Insight Global for the City of Plano, supporting modernization of a public-facing budget and research publication system."))
-story.append(bullet("Built a production design system for a 444-page civic publication, including reusable layouts, chart/cover components, iconography, and accessibility-aware information design."))
-story.append(bullet("Designed and shipped a mobile-responsive React/Next.js review app on Vercel for stakeholder selection, persistence, and JSON export of design decisions."))
-story.append(bullet("Scripted repetitive production tasks to improve consistency, speed, and review quality across a large-scale publication workflow."))
+story.append(bullet("Supported modernization of a public-facing budget and research publication system through publication design, structured review, and stakeholder-ready visual communication."))
+story.append(bullet("Built a production design system for a 444-page civic publication, including reusable layouts, cover directions, chart components, iconography, and accessibility-aware information design."))
+story.append(bullet("Designed and shipped a mobile-responsive interactive review app for stakeholder selection, saved preferences, and exportable design-decision records."))
+story.append(bullet("Used AI-assisted drafting, organization, and quality-check workflows to improve consistency, speed, and review clarity across a large publication process."))
 
 story.append(P("Publication Portfolio — Public-Facing Report & Visual Communication System", "ItemHead"))
 story.append(bullet("Curated publication work into a responsive portfolio experience with downloadable reports, visual previews, and structured project storytelling."))
-story.append(bullet("Focused on clarity, hierarchy, and executive readability for long-form reports, strategic forecasts, CIP materials, dashboards, and stakeholder-facing communication."))
+story.append(bullet("Focused on clarity, hierarchy, and executive readability for strategic forecasts, civic reports, CIP materials, data visuals, dashboards, and stakeholder-facing communication."))
+story.append(bullet("Maintained clickable references and public-facing project links so viewers can move from résumé summary to supporting publication examples."))
 
-story.append(P("SELECTED TECHNICAL PROJECTS", "Section"))
-story.append(P(f"Pymation QA Automation Portfolio — <a href='{PYMATION}' color='blue'>GitHub Repository</a>", "ItemHead"))
-story.append(bullet("Built a QA automation portfolio with 18 test files and 260+ test cases across API, UI, AI/ML validation, Flask API, and CRUD workflows."))
-story.append(bullet("Created test plans, bug reports, coverage documentation, screenshots, and CI/CD documentation for repeatable technical review."))
-
-story.append(P(f"HorizonOps Predictive Intelligence Platform — <a href='{HORIZONOPS}' color='blue'>Live Prototype</a>", "ItemHead"))
-story.append(bullet("Created a FastAPI/React operational intelligence prototype with telemetry APIs, machine health endpoints, prediction feedback loops, and dashboard workflows."))
-story.append(bullet("Defined validation strategy across unit tests, API/data-pipeline integration tests, model validation, Playwright checks, and load testing."))
-
-story.append(P("PROFESSIONAL EXPERIENCE", "Section"))
-story.append(P("AlxanderArt — Independent AI Engineer & Creative Technologist · Dallas–Fort Worth, TX · Jan 2021 – Present", "ItemHead"))
-story.append(bullet("Create publication, brand, web, automation, QA, and technical design systems for business, civic, and creative use cases."))
-story.append(bullet("Translate stakeholder goals into polished visual systems, technical prototypes, documentation, AI-assisted workflows, and deployed web experiences."))
-story.append(bullet("Apply Rhino 3D, XNURBS CAD surface modeling, 3D modeling, and 3D printing experience to prototyping, fabrication-aware design, and geometric problem-solving."))
-
-story.append(P("Insight Global — Publication Designer / Interactive Review App Builder, City of Plano Contract · Plano, TX · Mar 2026 – Jun 2026", "ItemHead"))
-story.append(bullet("Supported Budget and Research publication modernization from discovery through interactive review tooling and production design system delivery."))
-story.append(bullet("Delivered high-quality stakeholder-facing assets while coordinating publication layout, visual consistency, and usability across a large document system."))
-
-story.append(P("SW Consulting — IT Business Analyst · Remote / Dallas–Fort Worth, TX · 2018 – 2021", "ItemHead"))
-story.append(bullet("Partnered with engineers and product owners in Agile/Scrum environments to gather requirements, manage backlogs, support QA, write acceptance criteria, assist UAT, and retest defects."))
-
-story.append(P("TOOLS & TECHNOLOGIES", "Section"))
+story.append(P("PUBLICATION CAPABILITIES", "Section"))
 story.append(P(
-    "Adobe Illustrator, Photoshop, InDesign, After Effects, Acrobat Pro · PowerPoint · Figma · HTML/CSS · React · Next.js · TypeScript · Python · Flask/FastAPI · Git/GitHub · Vercel · Playwright · pytest · Postman · Rhino 3D · XNURBS · Blender · 3D printing workflows",
+    "Publication design · Strategic report layout · Civic/publication systems · Data visualization · Infographic direction · Executive-readable summaries · Interactive review workflows · Stakeholder review support · AI-assisted drafting, organization, and quality checks · Responsive portfolio presentation · Clickable PDF and web references",
     "Small",
 ))
 
-story.append(P("EDUCATION & CERTIFICATION", "Section"))
-story.append(P("Baylor University — B.S., Health Sciences (Kinesiology) · Division I Track & Field Athlete<br/>Careerist — QA Automation Engineer Certification, 2026", "Small"))
+story.append(P("SELECTED TOOLS", "Section"))
+story.append(P(
+    "Adobe Illustrator · Photoshop · InDesign · Acrobat Pro · PowerPoint · Figma · HTML/CSS · React · Next.js · GitHub · Vercel · AI-assisted writing and review workflows",
+    "Small",
+))
+
+story.append(P("EDUCATION", "Section"))
+story.append(P("Baylor University — B.S., Health Sciences (Kinesiology) · Division I Track & Field Athlete", "Small"))
 
 pdf = SimpleDocTemplate(str(OUT), pagesize=letter, rightMargin=0.48*inch, leftMargin=0.48*inch, topMargin=0.42*inch, bottomMargin=0.42*inch)
 pdf.build(story)
