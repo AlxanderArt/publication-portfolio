@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export default function ResumePage() {
           Resume
         </h1>
 
-        <div className="mb-6 flex items-center gap-4">
+        <div className="mb-6 flex flex-wrap items-center gap-4">
           <a
             href="/resume/resume.pdf"
             download
@@ -55,16 +56,40 @@ export default function ResumePage() {
             </svg>
             Download PDF
           </a>
+          <a
+            href="/resume/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/[.12] px-6 py-3 text-sm font-medium text-[var(--fg)] transition-colors hover:border-white/[.2] hover:bg-white/[.06]"
+          >
+            Open PDF
+          </a>
         </div>
 
-        {/* PDF viewer */}
-        <div className="glass overflow-hidden rounded-3xl">
-          <iframe
-            src="/resume/resume.pdf"
-            className="h-[65vh] md:h-[80vh] w-full"
-            title="Resume"
+        <p className="mb-6 max-w-2xl text-sm leading-relaxed text-[var(--muted)]">
+          Updated publication resume focused on publication design, AI-native
+          creative technology, QA automation, and CAD/3D skills. The PDF above
+          includes clickable links for LinkedIn, GitHub, portfolio, and selected
+          project references.
+        </p>
+
+        {/* Resume preview image for reliable website display and screenshot thumbnails. */}
+        <a
+          href="/resume/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="glass block overflow-hidden rounded-3xl p-3 transition-transform hover:scale-[1.01]"
+          aria-label="Open Maxwell Willis resume PDF"
+        >
+          <Image
+            src="/resume/resume-preview.png"
+            alt="Preview of Maxwell Willis publication resume"
+            width={1224}
+            height={1584}
+            priority
+            className="mx-auto h-auto w-full max-w-3xl rounded-2xl bg-white"
           />
-        </div>
+        </a>
       </div>
     </main>
   );
